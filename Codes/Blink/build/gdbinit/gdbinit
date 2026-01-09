@@ -1,0 +1,2 @@
+source C:/Users/HP/ESP32/Codes/Blink/build/gdbinit/symbols
+source C:/Users/HP/ESP32/Codes/Blink/build/gdbinit/connect
