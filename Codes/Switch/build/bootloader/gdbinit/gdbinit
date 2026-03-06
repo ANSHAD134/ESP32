@@ -1,0 +1,2 @@
+source C:/Users/HP/ESP32/Codes/Switch/build/bootloader/gdbinit/symbols
+source C:/Users/HP/ESP32/Codes/Switch/build/bootloader/gdbinit/connect

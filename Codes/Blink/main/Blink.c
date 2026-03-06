@@ -8,12 +8,12 @@
 void app_main(void)
 {
     gpio_reset_pin(led_pin);                        // Reset GPIO pin 2
-    gpio_set_direction(led_pin, GPIO_MODE_OUTPUT);
+    gpio_set_direction(led_pin, GPIO_MODE_OUTPUT);  // Set GPIO pin 2 as output
 while (1)
 {
     gpio_set_level(led_pin, 1);                     // Set GPIO pin 2 high
-    vTaskDelay(pdMS_TO_TICKS(500));                 // Delay for 1 second
+    vTaskDelay(pdMS_TO_TICKS(500));                 // Delay for 500ms 
     gpio_set_level(led_pin, 0);                     // Set GPIO pin 2 low
-    vTaskDelay(pdMS_TO_TICKS(500));                 // Delay for 1 second
+    vTaskDelay(pdMS_TO_TICKS(500));                 // Delay for 500ms
 }
 }
