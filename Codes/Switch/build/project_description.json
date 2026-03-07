@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Switch",
-    "project_version":    "39ac93b-dirty",
+    "project_version":    "eb56d3b-dirty",
     "project_path":       "C:/Users/HP/ESP32/Codes/Switch",
     "idf_path":           "C:/Users/HP/esp/v5.5.2/esp-idf",
     "build_dir":          "C:/Users/HP/ESP32/Codes/Switch/build",
