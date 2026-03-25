@@ -17,9 +17,9 @@
 #include "esp_crt_bundle.h"
 
 #define WIFI_SSID               "WIFI_SSID"
-#define WIFI_PASS               "WIFI_PASS"
+#define WIFI_PASS               "air74947"
 #define LM35_CONTROL_PIN        GPIO_NUM_33
-#define FIREBASE_URL            "YOURFIREBASE_URL/sensor_data.json"
+#define FIREBASE_URL            "https://esp32-lm35-39a03-default-rtdb.asia-southeast1.firebasedatabase.app/sensor_data.json"
 #define SENSOR_READ_INTERVAL_MS 5000
 #define TEMP_CALIBRATION_OFFSET 9.5                         // Adjust if readings are consistently off
 
