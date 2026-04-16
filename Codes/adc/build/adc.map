@@ -17526,7 +17526,7 @@ LOAD C:/Users/HP/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20251107/xtensa-esp-
  .rodata.s_vfs_null_dir
                 0x3f407e60       0x40 esp-idf/vfs/libvfs.a(nullfs.c.obj)
  .rodata.app_main.str1.4
-                0x3f407ea0       0x13 esp-idf/main/libmain.a(adc.c.obj)
+                0x3f407ea0       0x14 esp-idf/main/libmain.a(adc.c.obj)
  .rodata.str1.4
                 0x3f407ea0       0x23 esp-idf/xtensa/libxtensa.a(xtensa_intr.c.obj)
  .rodata        0x3f407ea0       0x24 esp-idf/xtensa/libxtensa.a(xtensa_vectors.S.obj)
