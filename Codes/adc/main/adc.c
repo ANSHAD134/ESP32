@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "esp32adc/adc_oneshot.h"
+#include "esp_adc/adc_oneshot.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
