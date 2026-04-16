@@ -23,7 +23,7 @@ void app_main(void)
     adc_oneshot_read(handle, ADC_CHANNEL_6, &raw);
     float milliVolts = (raw * 3300.0) / 4095.0;
     float tempC = (milliVolts / 10.0) + TEMP_CALIBRATION_OFFSET;
-    printf("ADC Raw Value = %0.2f C\n", tempC);
+    printf("Temperature = %0.2f C\n", tempC);
     vTaskDelay(pdMS_TO_TICKS(1000));             // Delay of 1 second
     }
 }
