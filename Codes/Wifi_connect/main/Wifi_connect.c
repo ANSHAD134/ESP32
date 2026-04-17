@@ -6,6 +6,9 @@
 #include "esp_netif.h"
 #include "nvs_flash.h"
 
+#define SSID        "Airtel_azha_2428"
+#define PASSWORD    "air74947"
+
 void app_main(void)
 {
     nvs_flash_init();
