@@ -19,5 +19,18 @@ void app_main(void)
     esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, handler, NULL);
     esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, handler, NULL);
 
-    
+    wifi_config_t config = {
+    .sta = {
+    .ssid = "SSID",
+    .password = "PASSWORD",
+    },
+    };
+
+    esp_wifi_set_mode(WIFI_MODE_STA);
+    esp_wifi_set_config(WIFI_IF_STA, &config);
+    esp_wifi_start();
+
+    while(1){
+        vTaskDelay(pdMS_TO_TICKS(2000));
+    }
 }
