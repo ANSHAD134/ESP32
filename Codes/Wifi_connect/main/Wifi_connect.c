@@ -10,4 +10,14 @@ void app_main(void)
 {
     nvs_flash_init();
     esp_netif_init();
+    esp_event_loop_create_default();
+    esp_netif_create_default_wifi_sta();
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    esp_wifi_init(&cfg);
+
+    esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, handler, NULL);
+    esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, handler, NULL);
+
+    
 }
