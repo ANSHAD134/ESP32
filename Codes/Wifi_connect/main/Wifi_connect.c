@@ -9,6 +9,15 @@
 #define SSID        "Airtel_azha_2428"
 #define PASSWORD    "air74947"
 
+static void Wifi_event_handler(Void* arg, esp_event_base_t event_base, int32_t event_id, event_data)
+{
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+        printf("Wifi started\n");
+        esp_wifi_connect();
+        
+    }
+}
+
 void app_main(void)
 {
     nvs_flash_init();
