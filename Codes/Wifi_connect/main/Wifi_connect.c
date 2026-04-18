@@ -11,10 +11,16 @@
 
 static void Wifi_event_handler(Void* arg, esp_event_base_t event_base, int32_t event_id, event_data)
 {
-    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) 
+    {
         printf("Wifi started\n");
         esp_wifi_connect();
-        
+    }
+    else if(event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
+    {
+        printf("Connection successful\n");
+        printf("Got IP");
+        ip_event_got_ip* event = (ip_event_got_ip*) event_data;
     }
 }
 
