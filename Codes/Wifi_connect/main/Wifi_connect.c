@@ -19,13 +19,13 @@ static void Wifi_event_handler(Void* arg, esp_event_base_t event_base, int32_t e
     else if(event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
     {
         printf("Connection successful\n");
-        ip_event_got_ip* event = (ip_event_got_ip*) event_data;
+        ip_event_got_ip_t* event = (ip_event_got_ip*) event_data;
         printf("Got IP: " IPSTR "\n", IP2STR(&event->ip.info.ip));
     }
     else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
     {
         printf("Wifi disconnected\n");
-        wifi_event_sta_disconnected* event = (wifi_event_sta_disconnected*) event_data;
+        wifi_event_sta_disconnected_t* event = (wifi_event_sta_disconnected*) event_data;
         printf("Reason: %d\n", event->reason);
         esp_wifi_connect();
     }
