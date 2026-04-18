@@ -41,8 +41,8 @@ void app_main(void)
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     esp_wifi_init(&cfg);
 
-    esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, handler, NULL);
-    esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, handler, NULL);
+    esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, Wifi_event_handler, NULL);
+    esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, Wifi_event_handler, NULL);
 
     wifi_config_t config = {
     .sta = {
