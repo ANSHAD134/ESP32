@@ -46,8 +46,8 @@ void app_main(void)
 
     wifi_config_t config = {
     .sta = {
-    .ssid = "SSID",
-    .password = "PASSWORD",
+    .ssid = SSID,
+    .password = PASSWORD,
     },
     };
 

@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Wifi_connect",
-    "project_version":    "f7d8e83",
+    "project_version":    "453c885-dirty",
     "project_path":       "C:/Users/HP/ESP32/Codes/Wifi_connect",
     "idf_path":           "C:/Users/HP/esp/v5.5.2/esp-idf",
     "build_dir":          "C:/Users/HP/ESP32/Codes/Wifi_connect/build",
