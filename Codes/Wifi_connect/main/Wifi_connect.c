@@ -19,8 +19,8 @@ static void Wifi_event_handler(Void* arg, esp_event_base_t event_base, int32_t e
     else if(event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP)
     {
         printf("Connection successful\n");
-        printf("Got IP");
         ip_event_got_ip* event = (ip_event_got_ip*) event_data;
+        printf("Got IP: " IPSTR "\n", IP2STR(&event->ip.info.ip));
     }
 }
 
