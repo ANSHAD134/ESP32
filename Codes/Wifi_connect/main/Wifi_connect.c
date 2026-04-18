@@ -22,6 +22,13 @@ static void Wifi_event_handler(Void* arg, esp_event_base_t event_base, int32_t e
         ip_event_got_ip* event = (ip_event_got_ip*) event_data;
         printf("Got IP: " IPSTR "\n", IP2STR(&event->ip.info.ip));
     }
+    else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
+    {
+        printf("Wifi disconnected\n");
+        wifi_event_sta_disconnected* event = (wifi_event_sta_disconnected*) event_data;
+        printf("Reason: %d\n", event->reason);
+        esp_wifi_connect();
+    }
 }
 
 void app_main(void)
