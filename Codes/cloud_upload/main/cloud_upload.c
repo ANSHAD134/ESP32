@@ -65,10 +65,10 @@ void app_main(void)
     init_config.unit_id = ADC_UNIT_1;            // Selected ADC 1 unit
     adc_oneshot_new_unit(&init_config, &handle); // Passing handle config to new unit
 
-    adc_oneshot_chan_cfg_t config;
-    config.atten = ADC_ATTEN_DB_12;              // Voltage range is 0-3.3V can be counted as 0-4095
-    config.bitwidth = ADC_BITWIDTH_DEFAULT;      // (12BIT ADC)
-    adc_oneshot_config_channel(handle, ADC_CHANNEL_6, &config);// Passing handle, channel value and configuration settings to channel configuration structure.
+    adc_oneshot_chan_cfg_t adc_config;
+    adc_config.atten = ADC_ATTEN_DB_12;              // Voltage range is 0-3.3V can be counted as 0-4095
+    adc_config.bitwidth = ADC_BITWIDTH_DEFAULT;      // (12BIT ADC)
+    adc_oneshot_config_channel(handle, ADC_CHANNEL_6, &adc_config);// Passing handle, channel value and configuration settings to channel configuration structure.
 
     while(1)
     {
