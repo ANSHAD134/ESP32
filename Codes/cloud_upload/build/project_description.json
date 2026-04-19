@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "cloud_upload",
-    "project_version":    "f316065-dirty",
+    "project_version":    "3854540-dirty",
     "project_path":       "C:/Users/HP/ESP32/Codes/cloud_upload",
     "idf_path":           "C:/Users/HP/esp/v5.5.2/esp-idf",
     "build_dir":          "C:/Users/HP/ESP32/Codes/cloud_upload/build",
