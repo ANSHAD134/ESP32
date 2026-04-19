@@ -17,11 +17,11 @@
 void send_to_cloud(float temp)
 {
     char url[200];
-    sprintf(url, "http://api.thingspeak.com/update?api_key=YOUR_API_KEY&field1=%.2f", temp);
-    esp_http_client_config_t config = {
+    sprintf(url, "http://api.thingspeak.com/update?api_key=LT9BG4UNA94TGSAY&field1=%.2f", temp);
+    esp_http_client_config_t cloud_config = {
         .url = url,
     };
-    esp_http_client_handle_t client = esp_http_client_init(&config);
+    esp_http_client_handle_t client = esp_http_client_init(&cloud_config);
     esp_http_client_perform(client);
     esp_http_client_cleanup(client);
 }
@@ -92,6 +92,7 @@ void app_main(void)
     float milliVolts = (raw * 3300.0) / 4095.0;
     float tempC = (milliVolts / 10.0) + TEMP_CALIBRATION_OFFSET;
     printf("Temperature = %0.2f C\n", tempC);
+    send_to_cloud(tempC);
     vTaskDelay(pdMS_TO_TICKS(15000));             // Delay of 15 second
     }
 }

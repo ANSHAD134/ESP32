@@ -1,0 +1,2 @@
+source C:/Users/HP/ESP32/Codes/cloud_upload/build/bootloader/gdbinit/symbols
+source C:/Users/HP/ESP32/Codes/cloud_upload/build/bootloader/gdbinit/connect
