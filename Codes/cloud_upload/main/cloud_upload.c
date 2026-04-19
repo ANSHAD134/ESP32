@@ -6,11 +6,24 @@
 #include "esp_netif.h"
 #include "nvs_flash.h"
 #include "esp_adc/adc_oneshot.h"
+#include "esp_http_client.h"
 
 #define SSID        "Airtel_azha_2428"
 #define PASSWORD    "air74947"
 
 #define TEMP_CALIBRATION_OFFSET      9.5         // Adjust if readings are consistently off
+
+void send_to_cloud(float temp)
+{
+    char url[200];
+    sprintf(url, "http://api.thingspeak.com/update?api_key=YOUR_API_KEY&field1=%.2f", temp);
+    esp_http_client_config_t config = {
+        .url = url,
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+    esp_http_client_perform(client);
+    esp_http_client_cleanup(client);
+}
 
 static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data)
 {
